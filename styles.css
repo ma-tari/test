@@ -1,0 +1,362 @@
+/* 전체 페이지 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFEBEE; /* 기본 배경색 */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('img/flowers-pattern.png'); /* 배경 이미지 추가 */
+    background-repeat: repeat; /* 이미지 반복 설정 */
+}
+
+/* 헤더 스타일 */
+.header {
+    display: flex;
+    flex-direction: column; /* 수직 방향 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    background-color: transparent; /* 배경색 투명으로 변경 */
+    color: #333;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 로고 스타일 */
+.header .logo img {
+    height: 50px;
+    margin-bottom: 10px; /* 로고와 메뉴 사이 간격 */
+}
+
+/* 메뉴 래퍼 스타일 */
+.menu-wrapper {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center;
+    width: 100%; /* 전체 너비 사용 */
+}
+
+/* 헤더 내비게이션 스타일 */
+.header nav {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+}
+
+.header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header nav ul li {
+    margin: 0 10px;
+}
+
+.header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+    color: #FF5722;
+}
+
+/* 메뉴 토글 버튼 숨김 */
+.menu-toggle {
+    display: none;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+    .header nav ul {
+        flex-direction: column; /* 세로 정렬 */
+        align-items: center; /* 중앙 정렬 */
+    }
+
+    .header nav ul li {
+        margin: 10px 0; /* 메뉴 항목 간격 조정 */
+    }
+}
+
+/* 컨테이너 스타일 */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center; /* 중앙 정렬 */
+    background-color: rgba(255, 255, 255, 0.8); /* 배경에 투명도 추가 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    padding: 20px; /* 내부 여백 추가 */
+}
+
+/* 메인 배너 스타일 */
+.main-banner {
+    background-color: transparent; /* 투명 배경 */
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc; /* 박스 테두리 추가 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 3D 효과 추가 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    margin-bottom: 20px; /* 아래 간격 추가 */
+}
+
+/* 메인 배너 이미지 스타일 */
+.main-banner-img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+/* 메인 배너 제목 스타일 */
+.main-banner h2 {
+    font-size: 2.5em;
+    margin: 20px 0 10px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* 화면 너비가 1200px 이하일 때 메인 배너 제목 스타일 */
+@media screen and (max-width: 1200px) {
+    .main-banner h2 {
+        font-size: 2em;
+    }
+}
+
+/* 화면 너비가 768px 이하일 때 메인 배너 제목 스타일 */
+@media screen and (max-width: 768px) {
+    .main-banner h2 {
+        font-size: 1.5em; /* 글씨 크기를 더 작게 조정 */
+        white-space: normal; /* 줄바꿈 허용 */
+        text-align: center; /* 중앙 정렬 */
+    }
+}
+
+/* 메인 배너 단락 스타일 */
+.main-banner p {
+    margin: 0 0 20px;
+    font-size: 18px;
+}
+
+/* 버튼 그룹 스타일 */
+.buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* 버튼 스타일 */
+.button {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px; /* 모서리 둥글게 */
+}
+
+/* 텔레그램 버튼 스타일 */
+.button-telegram {
+    background-color: #0088cc;
+}
+
+/* 카카오톡 버튼 스타일 */
+.button-kakao {
+    background-color: #FFEB3B;
+    color: #333;
+}
+
+/* 전화 버튼 스타일 */
+.button-phone {
+    background-color: #FF5722;
+}
+
+/* 섹션 콘텐츠 스타일 */
+.section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.8); /* 배경에 투명도 추가 */
+    padding: 20px;
+    text-align: left;
+    justify-content: center;
+    border: 1px solid #ccc; /* 박스 테두리 추가 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 3D 효과 추가 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    margin-bottom: 20px; /* 아래 간격 추가 */
+    box-sizing: border-box; /* 박스 크기 설정 */
+}
+
+/* 섹션 콘텐츠 이미지 스타일 */
+.section-content img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* 섹션 콘텐츠 텍스트 스타일 */
+.section-content .text-content {
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+}
+
+/* 화면 너비가 768px 이하일 때 섹션 콘텐츠 텍스트 중앙 정렬 */
+@media screen and (max-width: 768px) {
+    .section-content .text-content {
+        text-align: center; /* 중앙 정렬 */
+    }
+}
+
+/* 섹션 제목 스타일 */
+.section-content h3 {
+    margin: 10px 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    /* PC 버전에서의 섹션 콘텐츠 스타일 */
+    .section-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    /* PC 버전에서의 섹션 콘텐츠 이미지 스타일 */
+    .section-content img {
+        width: 48%;
+        max-width: 600px;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    /* PC 버전에서의 섹션 콘텐츠 텍스트 스타일 */
+    .section-content .text-content {
+        width: 48%;
+        max-width: 600px;
+        text-align: left;
+    }
+}
+
+/* 연락처 정보 스타일 */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.8); /* 배경에 투명도 추가 */
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ccc; /* 박스 테두리 추가 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 3D 효과 추가 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    margin-bottom: 20px; /* 아래 간격 추가 */
+}
+
+/* 연락처 정보 박스 스타일 */
+.contact-info .info-box {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    width: calc(25% - 20px);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* 박스 테두리 추가 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 3D 효과 추가 */
+    border-radius: 10px; /* 모서리 둥글게 */
+}
+
+/* 연락처 정보 박스 제목 스타일 추가 */
+.contact-info .info-box h2 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+/* 연락처 정보 박스 이미지 스타일 */
+.contact-info .info-box img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-info .info-box {
+        width: calc(50% - 20px);
+    }
+}
+
+/* 연락처 정보 텍스트 스타일 추가 */
+.contact-info .info-box p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* 이미지 박스 스타일 */
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px; /* 이미지들이 잘리지 않도록 패딩 추가 */
+    box-sizing: border-box; /* 패딩을 포함한 박스 크기 설정 */
+}
+
+.images .image-box {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    width: calc(25% - 20px);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* 박스 테두리 추가 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 3D 효과 추가 */
+    border-radius: 10px; /* 모서리 둥글게 */
+}
+
+.images .image-box img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1; /* 정사각형 비율 */
+    object-fit: cover;
+}
+
+/* 모바일 반응형 스타일 */
+@media screen and (max-width: 768px) {
+    .images .image-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* 푸터 스타일 */
+.footer {
+    background-color: transparent; /* 배경색 투명으로 변경 */
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    border: 1px solid #ccc; /* 박스 테두리 추가 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 3D 효과 추가 */
+    border-radius: 10px; /* 모서리 둥글게 */
+}
